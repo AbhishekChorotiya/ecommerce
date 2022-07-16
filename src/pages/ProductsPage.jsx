@@ -8,9 +8,11 @@ const ProductsPage = () => {
         <div>
             <Navbar></Navbar>
             <News></News>
+
             <Products
                 heading= "Dresses"
             ></Products>
+            
             <Footer></Footer>
         </div>
     )

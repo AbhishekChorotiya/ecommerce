@@ -5,6 +5,7 @@ const express= require("express")
 const homeRouter= express.Router()
 
 homeRouter.get("/", (req, res) =>{
+  
     // res.json will send 'json' file as response
     res.json({"message": "Backend Here"})
 })

@@ -13,7 +13,6 @@ const cookieParser = require("cookie-parser")
 const jwt = require("jsonwebtoken")
 var ObjectId = require('mongodb').ObjectId;
 var cors = require('cors')
-const { Email } = require("@mui/icons-material")
 const port = process.env.PORT || 8000
 
 // Creating Backend Server
@@ -290,6 +289,10 @@ app.post("/saveImage", (req, res) => {
     db.collection("Login_SignUp").updateOne({ _id: ObjectId(data) }, { $set: { imageURL: myImageURL } })
 
     res.redirect("/profile")
+})
+
+app.get("/addCart", (req, res) =>{
+
 })
 
 app.listen(port)

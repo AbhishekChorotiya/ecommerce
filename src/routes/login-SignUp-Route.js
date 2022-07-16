@@ -6,7 +6,6 @@ const jwt= require("jsonwebtoken")
 const cookieParser= require("cookie-parser")
 const JWT_Secret= "defrtgyh1123456dfghdfv"
 
-
 // Connecting to MongoDB Database
 mongoose.connect("mongodb://localhost:27017/ECommerce")
 var db = mongoose.connection

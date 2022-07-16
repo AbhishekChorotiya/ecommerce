@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PageTitle from "../PageTitle"
 import FlashCard from './FlashCard';
-import { flashData1, flashData2, flashData3 } from '../Data';
+import axios from 'axios';
 
 // Material UI
 import Fab from '@mui/material/Fab';
@@ -11,7 +11,20 @@ import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 
 const FlashDeals = () => {
 
+    //  The display status class will make the item disappear when the width is small.
+    //  It is because, it is set to display only for "large-block" width. Else, it is set to "display none".
     var [displayStatus, setDisplayStatus] = useState("d-none d-lg-block card ms-2 me-2");
+
+    var [flashData, setFlashData]= useState([])
+    var url= "https://free-store-api.herokuapp.com/offers"
+    
+    useEffect( ()=>{
+        axios.get(url).then(res => {
+            setFlashData(res.data)
+        })
+    }, [] )
+
+    console.log("flashData: "+ flashData);
 
     return (
         <div class="mb-5">
@@ -28,7 +41,7 @@ const FlashDeals = () => {
 
                         <div class="d-flex justify-content-evenly dark-bg">
                             {
-                                flashData2.map((contents) => {
+                                flashData.map((contents) => {
 
                                     var myClass;
                                     if (contents.id == 1) {
@@ -41,9 +54,10 @@ const FlashDeals = () => {
                                     return (
                                         <FlashCard
                                             cardClass={myClass}
+                                            displayStatus= {contents.id > 4 ? "none" : ""}
                                             key={contents.id}
-                                            title={contents.label}
-                                            Imgsrc={contents.src}
+                                            title={contents.item}
+                                            Imgsrc={contents.image}
                                         ></FlashCard>
 
                                     )
@@ -56,10 +70,10 @@ const FlashDeals = () => {
 
                         <div class="d-flex justify-content-evenly dark-bg">
                             {
-                                flashData2.map((contents) => {
+                                flashData.map((contents) => {
 
                                     var myClass;
-                                    if (contents.id == 1) {
+                                    if (contents.id == 5) {
                                         myClass = displayStatus;
                                     }
                                     else {
@@ -69,9 +83,10 @@ const FlashDeals = () => {
                                     return (
                                         <FlashCard
                                             cardClass={myClass}
+                                            displayStatus= {contents.id > 4 && contents.id < 9 ? "" : "none"}
                                             key={contents.id}
-                                            title={contents.label}
-                                            Imgsrc={contents.src}
+                                            title={contents.item}
+                                            Imgsrc={contents.image}
                                         ></FlashCard>
 
                                     )
@@ -84,10 +99,10 @@ const FlashDeals = () => {
 
                         <div class="d-flex justify-content-evenly dark-bg">
                             {
-                                flashData2.map((contents) => {
+                                flashData.map((contents) => {
 
                                     var myClass;
-                                    if (contents.id == 1) {
+                                    if (contents.id == 9) {
                                         myClass = displayStatus;
                                     }
                                     else {
@@ -97,9 +112,10 @@ const FlashDeals = () => {
                                     return (
                                         <FlashCard
                                             cardClass={myClass}
+                                            displayStatus= {contents.id > 8 && contents.id <13 ? "" : "none"}
                                             key={contents.id}
-                                            title={contents.label}
-                                            Imgsrc={contents.src}
+                                            title={contents.item}
+                                            Imgsrc={contents.image}
                                         ></FlashCard>
 
                                     )

@@ -5,6 +5,16 @@ body {
   background-color: #F6F6F6;
 }
 
+/* start Rating images */
+.star-rating img{
+  width: 14px
+}
+
+/* Catalog Image box */
+.box{
+  border: 1px solid rgb(202, 201, 201);
+}
+
 /* Navbar CSS */
 .my-navbar{
   position: fixed;
@@ -13,11 +23,25 @@ body {
   height: 50px;
 }
 
-/* All Cards */
+/* Images */
+.cover-image{
+  object-fit: fill;
+}
+
+/* Background */
 .dark-bg{
   background-color: #f6f6f6;
 }
 
+.white-bg{
+  background-color: white;
+}
+
+.greenish-bg{
+  background-color: #f7fbff;
+}
+
+/* All Cards */
 .card-block{
   padding-bottom:50px
 }
@@ -160,109 +184,10 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-
-
-/*--------------------------------------------------------------
-  # Hero Section
-  --------------------------------------------------------------*/
-#hero {
-  width: 100%;
-  height: 100vh;
-  background: url("../images/beach.jpg") top right;
-  background-size: cover;
-  position: relative;
-}
-
-#hero:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.65);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#hero .hero-container {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 15px;
-}
-
-#hero h1 {
-  margin: 0 0 10px 0;
-  font-size: 64px;
-  font-family: "Satisfy", serif;
-  color: #fff;
-}
-
-#hero h2 {
-  color: #eee;
-  margin-bottom: 50px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-#hero .btn-scroll {
-  transition: 0.4s;
-  color: rgba(255, 255, 255, 0.6);
-  animation: up-down 1s ease-in-out infinite alternate-reverse both;
-}
-
-#hero .btn-scroll i {
-  font-size: 48px;
-}
-
-#hero .btn-scroll:hover {
-  color: #ffb727;
-}
-
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-  }
-}
-@media (max-width: 575px) {
-  #hero h1 {
-    font-size: 40px;
-  }
-  #hero h2 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-}
-
-@-webkit-keyframes up-down {
-  0% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes up-down {
-  0% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(-5px);
-  }
-}
-
 /*--------------------------------------------------------------
   # Sections General
   --------------------------------------------------------------*/
-section {
+/* section {
   padding: 60px 0;
 }
 
@@ -310,115 +235,11 @@ section {
   .section-title span {
     font-size: 38px;
   }
-}
+} */
 
-/*--------------------------------------------------------------
-  # About Me
-  --------------------------------------------------------------*/
-.about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #3b434a;
-  text-transform: uppercase;
-}
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-.about .content ul strong {
-  margin-right: 10px;
-}
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: #ffb727;
-  line-height: 0;
-}
-.about .content p:last-child {
-  margin-bottom: 0;
-}
-.about .content .count-box {
-  width: 100%;
-}
-.about .content .count-box i {
-  display: block;
-  font-size: 36px;
-  color: #ffb727;
-  float: left;
-  line-height: 0;
-}
-.about .content .count-box span {
-  font-size: 36px;
-  line-height: 30px;
-  display: block;
-  font-weight: 700;
-  color: #3b434a;
-  margin-left: 50px;
-}
-.about .content .count-box p {
-  padding: 15px 0 0 0;
-  margin: 0 0 0 50px;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-  color: #5d6a75;
-}
-.about .content .count-box a {
-  font-weight: 600;
-  display: block;
-  margin-top: 20px;
-  color: #5d6a75;
-  font-size: 15px;
-  font-family: "Satisfy", serif;
-  transition: ease-in-out 0.3s;
-}
-.about .content .count-box a:hover {
-  color: #82909c;
-}
-.about .image {
-  background: url("../images/me.jpg") center center no-repeat;
-  background-size: contain;
-  min-height: 500px;
-}
-.about .skills-content {
-  margin-top: 30px;
-}
-.about .skills-content .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-.about .skills-content .progress .skill {
-  padding: 10px 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 700;
-  font-family: "Raleway", sans-serif;
-  color: #3b434a;
-}
-.about .skills-content .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-.about .skills-content .progress-bar-wrap {
-  background: #e6e8eb;
-}
-.about .skills-content .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #ffb727;
-}
 
-/*--------------------------------------------------------------
-  # Contact Me
-  --------------------------------------------------------------*/
+/* Contact Me */
+
 .contact-btn {
   margin-top: 15px;
   display: flex;
@@ -444,172 +265,6 @@ section {
 /* Single Product */
 * {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-b {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.result-container {
-  padding: 2rem;
-}
-
-.movie-poster img {
-  height: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  border: 4px solid white;
-}
-
-.movie-title {
-  text-align: center;
-  font-size: 2rem;
-  color: rgb(219, 190, 26);
-  padding-top: 1rem;
-
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bold;
-}
-
-.movie-info .released {
-  background-color: rgb(19, 235, 170);
-  padding: 4px 10px;
-  margin-top: 0.2rem;
-  border-radius: 5px;
-  display: inline-block;
-  font-size: larger;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.movie-info .rated {
-  background-color: rgb(235, 202, 19);
-  padding: 4px 10px;
-  margin-top: 0.5rem;
-  border-radius: 5px;
-  display: inline-block;
-  font-size: larger;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.movie-info .genre {
-  background-color: rgb(168, 168, 168);
-  margin-top: 0.5rem;
-
-  padding: 4px 10px;
-  border-radius: 5px;
-  display: inline-block;
-  font-size: larger;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.movie-info .budget i {
-  color: green;
-}
-
-.movie-info .budget {
-  font-size: larger;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.movie-info .runtime i {
-  color: gray;
-}
-
-.movie-info .runtime {
-  font-size: larger;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.movie-info .plot i {
-  color: red;
-}
-
-.movie-info .plot {
-  font-size: larger;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.movie-info .production i {
-  color: gold;
-}
-
-.movie-info .language i {
-  color: blue;
-}
-
-.movie-info .production {
-  font-size: larger;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.movie-info .language {
-  font-size: larger;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.movie-info .plot {
-  max-width: 500px;
-  font-size: larger;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.movie-misc-info {
-  list-style-type: none;
-}
-
-@media screen and (max-width: 1200px) {
-  .movie-poster img {
-    max-width: 500px;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .movie-poster img {
-    max-width: 400px;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .movie-poster img {
-    max-width: 600px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .movie-poster img {
-    max-width: 400px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .movie-poster img {
-    max-width: 340px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .movie-poster img {
-    max-width: 300px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .movie-poster img {
-    max-width: 250px;
-  }
-}
-
-@media screen and (max-width: 290px) {
-  .movie-poster img {
-    max-width: 200px;
-  }
 }
 
 /* Hover Effect on Update Image Cards */

@@ -14,7 +14,7 @@ const Login = (props) => {
                                 desc="Log In to continue..."
                             ></PageTitle>
 
-                            <form id='myForm' class= "card-style" action="/login" method="post">
+                            <form id='myForm' class="card-style" action="/login" method="post">
                                 <div class="mb-3">
                                     <label class="form-label" for="email"><b>Email</b></label>
                                     <input class="form-control item" type="email" id="email" name="Email" required />

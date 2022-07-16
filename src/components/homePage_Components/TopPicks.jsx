@@ -1,8 +1,20 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from "axios"
+
 import TopPick_Card from './TopPick_Card'
 import PageTitle from '../PageTitle'
 
 const TopPicks = () => {
+    const url = "https://free-store-api.herokuapp.com/offers"
+
+    var [topOffers, setTopOffers]= useState([])
+
+    useEffect( ()=>{
+        axios.get(url).then(res => {
+            setTopOffers(res.data)
+        })
+    }, [] )
+
     return (
         <div>
             <PageTitle
@@ -11,14 +23,18 @@ const TopPicks = () => {
             ></PageTitle>
 
             <div class="row g-0 m-5">
-                <TopPick_Card></TopPick_Card>
-                <TopPick_Card></TopPick_Card>
-                <TopPick_Card></TopPick_Card>
-                <TopPick_Card></TopPick_Card>
-                <TopPick_Card></TopPick_Card>
-                <TopPick_Card></TopPick_Card>
-                <TopPick_Card></TopPick_Card>
-                <TopPick_Card></TopPick_Card>
+                {
+                    topOffers.map( (contents)=>{
+                        return(
+                            <TopPick_Card
+                                myKey= {contents.id}
+                                displayStatus= {contents.id > 8 ? "none" : ""}
+                                imgSrc= {contents.image}
+                                myItem= {contents.item}
+                            ></TopPick_Card>
+                        )
+                    } )
+                }
             </div>
 
         </div>
