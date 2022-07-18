@@ -21,24 +21,36 @@ const AddProducts = (props) => {
 
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label" ><b>Category</b></label>
-                                <input class="form-control item" type="text" name="category" placeholder='Fashion' />
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label class="form-label" ><b>Category</b></label>
+                                        <input class="form-control item" type="text" name="category" placeholder='Fashion' />
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label class="form-label" ><b>Price ($) </b></label>
+                                        <input class="form-control item" type="number" placeholder='$20' name="price" />
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label" ><b>Price ($) </b></label>
-                                <input class="form-control item" type="number" placeholder='$20' name="price" />
-                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="phone"><b>Ratings</b></label>
+                                        <input class="form-control item" type="number" min={0} max={5} id="phone" name="Phone" placeholder='0 to 5' />
+                                    </div>
+                                </div>
 
-                            <div class="mb-3">
-                                <label class="form-label" for="phone"><b>Ratings</b></label>
-                                <input class="form-control item" type="number" min={0} max= {5} id="phone" name="Phone" />
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label" for="phone"><b>Offers (% Off)</b></label>
-                                <input class="form-control item" type="number"  name="offer" placeholder='50% Off' min={10} max= {100} />
+                                <div className="col">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="phone"><b>Offers (% Off)</b></label>
+                                        <input class="form-control item" type="number" name="offer" placeholder='50% Off' min={10} max={100} />
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="mb-3">
