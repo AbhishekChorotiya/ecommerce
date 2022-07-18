@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Star_Rating from '../Star_Rating'
+import Star_Rating from '../Common_Components/Star_Rating'
 
 const Catalog_Image = () => {
     return (

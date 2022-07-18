@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import PageTitle from "../PageTitle"
+import PageTitle from "../Common_Components/PageTitle"
 import FlashCard from './FlashCard';
 import axios from 'axios';
 

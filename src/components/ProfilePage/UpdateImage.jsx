@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import PageTitle from "../PageTitle"
+import PageTitle from "../Common_Components/PageTitle"
 import ImageCard from './ImageCard';
 import Update_UserDetails from "./Update_UserDetails"
-import { profileImage } from '../Data';
+import { profileImage } from '../../Data';
 import axios from 'axios';
 
 import RefreshIcon from '@mui/icons-material/Refresh';

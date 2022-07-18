@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "../pages/Home";
-import ProductsPage from "../pages/ProductsPage";
-import SelectedProduct from "../pages/SelectedProduct";
-import LoginSignUp from "../pages/LoginSignUp";
-import Cart from "../pages/Cart"
-import ProfilePage from "../pages/ProfilePage";
-import UpdateInfo from "../pages/UpdateInfo";
-import AddProducts from "./Add_Products/AddProducts";
+import Home from "./pages/Home";
+import ProductsPage from "./pages/ProductsPage";
+import SelectedProduct from "./pages/SelectedProduct";
+import LoginSignUp from "./pages/LoginSignUp";
+import Cart from "./pages/Cart"
+import ProfilePage from "./pages/ProfilePage";
+import UpdateInfo from "./pages/UpdateInfo";
+import AddProducts from "./components/Forms/AddProducts";
 
 function App() {
     return (

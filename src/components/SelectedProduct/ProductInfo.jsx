@@ -1,7 +1,7 @@
 import React from 'react'
 
-import PageTitle from "../PageTitle"
-import Catalog_Image from '../productsPage_Components/Catalog_Image';
+import PageTitle from "../Common_Components/PageTitle"
+import Catalog_Image from '../ProductsPage/Catalog_Image';
 import Comment from './Comment';
 
 import IconButton from '@mui/material/IconButton';

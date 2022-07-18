@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Update_UserDetails from "../components/profilePage_Components/Update_UserDetails"
-import Footer from '../components/Footer'
-import PageTitle from '../components/PageTitle'
-import UpdateImage from '../components/profilePage_Components/UpdateImage'
+import Navbar from '../components/Common_Components/Navbar_Footer/Navbar'
+import Update_UserDetails from "../components/ProfilePage/Update_UserDetails"
+import Footer from '../components/Common_Components/Navbar_Footer/Footer'
+import PageTitle from '../components/Common_Components/PageTitle'
+import UpdateImage from '../components/ProfilePage/UpdateImage'
 
 const UpdateInfo = () => {
 

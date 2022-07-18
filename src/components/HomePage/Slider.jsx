@@ -1,6 +1,6 @@
 import React from 'react'
 import SliderImage from './SliderImage'
-import { sliderData } from '../Data'
+import { sliderData } from '../../Data'
 
 const Slider = () => {
 

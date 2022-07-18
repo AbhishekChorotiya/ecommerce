@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios"
 
-import PageTitle from "../PageTitle"
+import PageTitle from "../Common_Components/PageTitle"
 
 const Categories = () => {
 

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from "axios"
 
 import TopPick_Card from './TopPick_Card'
-import PageTitle from '../PageTitle'
+import PageTitle from '../Common_Components/PageTitle'
 
 const TopPicks = () => {
     const url = "https://free-store-api.herokuapp.com/offers"

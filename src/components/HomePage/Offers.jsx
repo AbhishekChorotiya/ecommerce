@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import PageTitle from "../PageTitle"
-import { productsData } from '../Data'
+import PageTitle from "../Common_Components/PageTitle"
+import { productsData } from '../../Data'
 import axios from 'axios'
 
 const Offers = () => {

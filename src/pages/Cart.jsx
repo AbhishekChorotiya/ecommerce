@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from "../components/Footer"
-import PageTitle from '../components/PageTitle';
-import Cart_Item from '../components/cart/Cart_Item';
-import Shopping_Summary from '../components/cart/Shopping_Summary';
+import Navbar from '../components/Common_Components/Navbar_Footer/Navbar'
+import Footer from "../components/Common_Components/Navbar_Footer/Footer"
+import PageTitle from '../components/Common_Components/PageTitle';
+import Cart_Item from '../components/Cart/Cart_Item';
+import Shopping_Summary from '../components/Cart/Shopping_Summary';
 
 const Cart = () => {
     return (

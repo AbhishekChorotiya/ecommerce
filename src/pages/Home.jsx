@@ -1,19 +1,19 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 
-import Navbar2 from '../components/Navbar2'
-import Slider from '../components/homePage_Components/Slider'
-import Offers from '../components/homePage_Components/Offers'
-import Categories from '../components/homePage_Components/Categories'
-import ContactMe from '../components/homePage_Components/ContactMe'
-import FlashDeals from '../components/homePage_Components/FlashDeals'
-import TopPicks from '../components/homePage_Components/TopPicks'
-import Footer from '../components/Footer'
+import Navbar from '../components/Common_Components/Navbar_Footer/Navbar'
+import Slider from '../components/HomePage/Slider'
+import Offers from '../components/HomePage/Offers'
+import Categories from '../components/HomePage/Categories'
+import ContactMe from '../components/HomePage/ContactMe'
+import FlashDeals from '../components/HomePage/FlashDeals'
+import TopPicks from '../components/HomePage/TopPicks'
+import Footer from '../components/Common_Components/Navbar_Footer/Footer'
 
 
 const Home = () => {
     return (
         <div>
-            <Navbar2></Navbar2>
+            <Navbar></Navbar>
             <Slider></Slider>
             <Categories></Categories>
             <TopPicks></TopPicks>

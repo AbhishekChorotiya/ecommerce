@@ -1,6 +1,6 @@
 import React from 'react'
 
-import PageTitle from '../PageTitle'
+import PageTitle from '../Common_Components/PageTitle'
 import SortProducts from './SortProducts'
 import Filter_Products from './Filter_Products'
 import Catalog_Image from './Catalog_Image'
