@@ -9,6 +9,7 @@ const Cart_Item = () => {
                     <div class="product-image"><img class="img-fluid d-block mx-auto image" src="assets/img/tech/image2.jpg" /></div>
                 </div>
 
+
                 <div class="col-md-5">
                     <a href="#">Lorem Ipsum dolor</a>
 
