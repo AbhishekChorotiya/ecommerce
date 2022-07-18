@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import LoginNavbar from '../components/Common_Components/Navbar_Footer/LoginNavbar'
+import LoginNavbar from '../components/Common_Components/LoginNavbar'
 import Login from "../components/Forms/Login"
 import SignUp from '../components/Forms/SignUp'
-import Footer from "../components/Common_Components/Navbar_Footer/Footer"
+import Footer from "../components/Common_Components/Footer"
 
 const LoginSignUp = () => {
 

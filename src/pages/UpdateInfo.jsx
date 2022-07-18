@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../components/Common_Components/Navbar_Footer/Navbar'
+import Navbar from '../components/Common_Components/Navbar'
 import Update_UserDetails from "../components/ProfilePage/Update_UserDetails"
-import Footer from '../components/Common_Components/Navbar_Footer/Footer'
+import Footer from '../components/Common_Components/Footer'
 import PageTitle from '../components/Common_Components/PageTitle'
 import UpdateImage from '../components/ProfilePage/UpdateImage'
 
