@@ -61,7 +61,7 @@ export default function Navbar(props) {
                                         TransitionProps={{ timeout: 600 }}
                                         title="Cart"
                                     >
-                                        <Badge badgeContent={4} color="secondary">
+                                        <Badge badgeContent={7} color="secondary">
                                             <ShoppingCartOutlinedIcon />
                                         </Badge>
                                     </Tooltip>

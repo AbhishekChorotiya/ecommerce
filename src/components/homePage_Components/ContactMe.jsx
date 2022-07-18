@@ -66,13 +66,6 @@ const ContactMe = () => {
 
 
                                 </div>
-                                {/* <div class="col-md-6">
-                                    <div class="card-style mt-4 mb-4">
-                                        <i class="info-icon bg-light text-info"><a><LocalPhoneOutlinedIcon /></a></i>
-                                        <h3 class= "pt-1">Call Me</h3>
-                                        <p>7014628881</p>
-                                    </div>
-                                </div> */}
                             </div>
 
                         </div>
@@ -106,8 +99,8 @@ const ContactMe = () => {
                                 </div>
 
                                 <div class="form-group mt-3">
-                                    <textarea class="form-control" name="message" id="message" rows="6"
-                                        placeholder="Message" required></textarea>
+                                    <textarea class="form-control" name="message" id="message" rows="6" placeholder="Message" required>
+                                    </textarea>
                                 </div>
 
                                 <div class="d-flex justify-content-center">
