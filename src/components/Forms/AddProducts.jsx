@@ -14,7 +14,7 @@ const AddProducts = (props) => {
                         ></PageTitle>
 
                         {/* In forms, name filed is very Important, because it is used in 'req.body.' while connecting to database */}
-                        <form method="post" class="card-style" action="/signUp">
+                        <form method="post" class="card-style" action="/addproducts">
 
                             <div class="row">
                                 <div class="mb-3"><label class="form-label" for="first_name"><strong>Product Name</strong></label><input class="form-control" type="text" placeholder="Jacket" name="product" /></div>
@@ -41,7 +41,7 @@ const AddProducts = (props) => {
                                 <div class="col">
                                     <div class="mb-3">
                                         <label class="form-label" for="phone"><b>Ratings</b></label>
-                                        <input class="form-control item" type="number" min={0} max={5} id="phone" name="Phone" placeholder='0 to 5' />
+                                        <input class="form-control item" type="number" min={0} max={5} id="phone" name="ratings" placeholder='0 to 5' />
                                     </div>
                                 </div>
 

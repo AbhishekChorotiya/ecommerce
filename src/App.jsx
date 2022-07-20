@@ -9,6 +9,7 @@ import Cart from "./pages/Cart"
 import ProfilePage from "./pages/ProfilePage";
 import UpdateInfo from "./pages/UpdateInfo";
 import AddProducts from "./components/Forms/AddProducts";
+import Get from "./pages/get";
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                 <Route exact path="cart" element={<Cart />} />
                 <Route exact path="profile" element={<ProfilePage />} />
                 <Route exact path="update" element={<UpdateInfo />} />
+                <Route exact path="get" element={<Get />} />
             </Routes>
         </BrowserRouter>
     )

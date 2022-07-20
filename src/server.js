@@ -5,6 +5,9 @@ const bodyParser = require("body-parser")
 var ObjectId = require('mongodb').ObjectId;
 var cors = require('cors')
 const port = process.env.PORT || 8000
+// Using UserModels ---------------------------------------------------------------------------------
+const User = require('./userModels/User')
+const Product = require('./userModels/product')
 
 // CREATING SERVER ----------------------------------------------------------------------------------
 var app = express()
@@ -18,7 +21,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 // CONNECTING SERVER TO MONGODB DATABASE ----------------------------------------------------------------
-mongoose.connect("mongodb://localhost:27017/ECommerce")
+mongoose.connect("mongodb://127.0.0.1:27017/ECommerce")
 var db = mongoose.connection
 
 db.on('error', console.log.bind(console, "Connection Error"))
@@ -96,37 +99,27 @@ app.post("/login", async function (req, res) {
 //  3. SignUp Route
 app.post("/signUp", (req, res) => {
     console.log(req.body);
-
-    var fName = req.body.first_name
-    var lName = req.body.last_name
-    var email = req.body.Email
-    var password = req.body.Password
-    var phone = req.body.Phone
-    var city = req.body.City
-    var country = req.body.Country
-    var address = req.body.Address
-
-    var data = {
-        "Name": fName+ " "+ lName,
-        "Email": email,
-        "Password": password,
-        "Phone": phone,
-        "City": city,
-        "Country": country,
-        "Address": address,
-        "imageURL": "https://api.multiavatar.com/" + Math.floor(Math.random() * 1000000) + ".svg"
-    }
-
-    db.collection("Login_SignUp").insertOne(data, (err, collection) => {
-        if (err) {
-            throw err
-        }
-        else {
-            console.log("Record Inserted Succesfully");
-        }
-
-        return res.redirect('/')
+    
+    const user = new User({
+        fname : req.body.first_name,
+        lname : req.body.last_name,
+        email : req.body.Email,
+        password : req.body.Password,
+        phone : req.body.Phone,
+        city : req.body.City,
+        country : req.body.Country,
+        address : req.body.Address,
+        imageURL: "https://api.multiavatar.com/" + Math.floor(Math.random() * 1000000) + ".svg"
     })
+
+    user.save().then(()=>{
+        console.log(user);
+        res.redirect('/')
+    }).catch((e)=>{
+        console.log(e);
+        res.send(e)
+    })
+
 
 })
 
@@ -249,6 +242,33 @@ app.post("/saveImage", (req, res) => {
     db.collection("Login_SignUp").updateOne({ _id: ObjectId(data) }, { $set: { imageURL: myImageURL } })
 
     res.redirect("/profile")
+})
+
+app.post('/addProducts',(req,res)=>{
+    const products = new Product({
+        product: req.body.product,
+        category: req.body.category,
+        price: req.body.price,
+        ratings: req.body.ratings,
+        offers: req.body.offers,
+        image: req.body.image,
+        desc: req.body.desc,
+    })
+    products.save().then(()=>{
+        res.send('product Added!')
+    }).catch((e)=>{
+        res.send(e)
+    })
+})
+
+app.get('/get',async(req,res)=>{
+    res.set({
+        'Access-Control-Allow-Origin': '*'
+    });
+    const products = await Product.getAllproducts();
+    console.log(products);
+    res.json(products)
+
 })
 
 // ROUTES ENDS HERE ----------------------------------------------------------------------------------------
